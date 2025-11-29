@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cart — Shoply</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page page--cart">
+<header class="site-header">
+<div class="container header__inner">
+<a href="index.html" class="brand">totya</a>
+<nav class="nav">
+<ul class="nav__list"><li><a href="products.html">Products</a></li></ul>
+</nav>
+<div class="header__actions"><a href="cart.html" class="cart-link">Cart</a></div>
+</div>
+</header>
+
+
+<main class="container">
+<h1>Your Cart</h1>
+<div id="cartItems" class="cart-items">
+<!-- JS will render cart rows -->
+</div>
+<div class="cart-summary">
+<p>Total: <strong id="cartTotal">$0.00</strong></p>
+<a href="checkout.html" class="btn btn--primary">Proceed to Checkout</a>
+</div>
+</main>
+
+
+<footer class="site-footer"><div class="container">&copy; <span id="year5">2025</span> totya</div></footer>
+
+
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
