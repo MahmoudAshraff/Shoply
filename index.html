@@ -1,79 +1,95 @@
-<!doctype html>
-<nav class="nav" aria-label="Main navigation">
-<ul class="nav__list">
-<li><a href="products.html">Products</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-<div class="header__actions">
-<button class="icon-btn" id="searchBtn" aria-label="Search">🔍</button>
-<a href="cart.html" class="cart-link" aria-label="Cart">Cart <span id="cartCount" class="cart-count">0</span></a>
-  <button id="themeToggle" class="icon-btn">🌓</button>
-</div>
-</div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Totya Shop — Premium Gear</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
+<body>
 
-<main>
-<section class="hero">
-<div class="container hero__inner fade-in reveal">
-<div class="hero__content">
-<h1 class="hero__title">Discover premium gear — designed for riders</h1>
-<p class="hero__subtitle">Quality products, clean UI, fast checkout — built with HTML/CSS/JS only.</p>
-<a class="btn btn--primary" href="products.html">Shop Now</a>
-</div>
-<div class="hero__image">
-<img src="assets/images/hero.jpg" alt="Shoply hero">
-</div>
-</div>
-</section>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header-row">
 
+      <!-- LOGO -->
+      <a href="index.html" class="brand">Totya<span class="dot">.</span></a>
 
-<section class="features container">
-<div class="grid grid--3">
-<div class="card feature">
-<h3>Free shipping</h3>
-<p>Orders over $50.</p>
-</div>
-<div class="card feature">
-<h3>Secure payments</h3>
-<p>Trusted providers and encryption.</p>
-</div>
-<div class="card feature">
-<h3>Fast support</h3>
-<p>Email response within 24 hours.</p>
-</div>
-</div>
-</section>
+      <!-- CONTROLS -->
+      <div class="controls">
 
+        <!-- Search -->
+        <input type="search"
+               id="searchInput"
+               class="search"
+               placeholder="Search products...">
 
-<section class="products container">
-<div class="section-header">
-<h2>Featured Products</h2>
-<a href="products.html" class="link--muted">View all</a>
-</div>
-<div id="featuredList" class="grid grid--3 reveal" aria-live="polite">
-<!-- JS will inject featured product cards here -->
-</div>
-</section>
-</main>
+        <!-- Filters -->
+        <div class="selects">
+          <div class="select-wrap">
+            <select id="categoryFilter" class="custom-select">
+              <option value="all">All</option>
+              <option value="helmets">Helmets</option>
+              <option value="jackets">Jackets</option>
+              <option value="accessories">Accessories</option>
+            </select>
+            <span class="select-icon">▼</span>
+          </div>
+        </div>
 
+        <!-- Cart -->
+        <button class="cart-btn" id="openCart">Cart</button>
+      </div>
+    </div>
+  </header>
 
-<footer class="site-footer">
-<div class="container">
-<div class="footer__inner">
-<p>&copy; <span id="year">2025</span> totya — Shoply demo</p>
-<nav class="footer__nav">
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
-</div>
-</footer>
+  <!-- ================= SIDEBAR CART ================= -->
+  <aside class="sidebar" id="sidebarCart">
+    <div class="cart-items reveal" id="cartItems"></div>
 
+    <div class="cart-footer">
+      <p class="total">Total: <span id="cartTotal">$0</span></p>
+      <button class="btn primary" onclick="location.href='checkout.html'">Checkout</button>
+    </div>
+  </aside>
 
-<script src="assets/js/cart.js" defer></script>
-<script src="assets/js/main.js" defer></script>
+  <!-- ================= MAIN ================= -->
+  <main class="main container">
+
+    <!-- LEFT SIDE CONTENT -->
+    <div class="left-col">
+
+      <!-- HERO -->
+      <section class="hero fade-in reveal">
+        <h1>Premium Riding Gear Tailored for You</h1>
+        <p class="lead">High-quality helmets, jackets & accessories crafted for performance and style.</p>
+      </section>
+
+      <!-- PRODUCTS GRID -->
+      <section>
+        <div class="products-grid fade-in reveal" id="productList">
+          <!-- JS Will Render Product Cards Here -->
+        </div>
+      </section>
+
+      <!-- PAGINATION (Optional later in JS) -->
+      <div class="pagination fade-in reveal">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" style="padding:40px 0;text-align:center;color:var(--muted)">
+    <p>&copy; 2025 Totya Shop. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
 </body>
 </html>
