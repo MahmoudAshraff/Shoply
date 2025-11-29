@@ -1,0 +1,261 @@
+/* Reset & Base */
+:root {
+  --gold: #b8860b;
+  --gold-light: #d4af37;
+  --text: #0f1720;
+  --bg: #f6f7fb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__list a {
+  text-decoration: none;
+  padding: .25rem .5rem;
+  border-radius: 6px;
+  color: var(--text);
+}
+
+.nav__list a:hover {
+  background: rgba(0,0,0,.05);
+}
+
+.cart-link {
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+}
+
+.cart-count {
+  background: var(--gold);
+  color: #fff;
+  padding: 2px 6px;
+  font-size: .75rem;
+  border-radius: 100px;
+  margin-left: 4px;
+}
+
+/* Contact Page */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: .7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: .4rem;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: .7rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border: none;
+  color: #fff;
+}
+
+/* Footer */
+.site-footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: 2rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero__inner, .products-grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid--3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero__title {
+    font-size: 1.4rem;
+  }
+}
+
+/* ============================
+   MOBILE FIRST RESPONSIVENESS
+   ============================ */
+
+/* ---------- Mobile (max 600px) ---------- */
+@media (max-width: 600px) {
+
+  /* Container padding */
+  .container {
+    padding: 0.8rem;
+  }
+
+  /* Header */
+  .header__inner {
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .nav__list {
+    gap: .6rem;
+  }
+
+  /* Hero */
+  .hero__inner {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .hero__image img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero__title {
+    font-size: 1.35rem;
+    margin-bottom: .4rem;
+  }
+
+  /* Products Page */
+  .products-grid {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+    order: -1;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Product Page */
+  .product-wrap {
+    flex-direction: column;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+
+  .product-info {
+    max-width: 100%;
+  }
+
+  /* Cart */
+  .cart-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-row img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cart-qty {
+    width: 100%;
+  }
+}
+
+/* ---------- Tablet (600px to 900px) ---------- */
+@media (min-width: 600px) and (max-width: 900px) {
+
+  .hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .product-wrap {
+    flex-direction: column;
+  }
+
+}
+
+/* ---------- Large Tablet (900px to 1200px) ---------- */
+@media (min-width: 900px) and (max-width: 1200px) {
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
