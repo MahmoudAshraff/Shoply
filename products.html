@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Products — Shoply</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page page--products">
+<header class="site-header">
+<div class="container header__inner">
+<a href="index.html" class="brand">totya</a>
+<nav class="nav" aria-label="Main navigation">
+<ul class="nav__list">
+<li><a href="products.html" aria-current="page">Products</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+</nav>
+<div class="header__actions">
+<a href="cart.html" class="cart-link">Cart <span id="cartCount2" class="cart-count">0</span></a>
+</div>
+</div>
+</header>
+
+
+<main class="container">
+<div class="products-grid">
+<aside class="filters">
+<h4>Filters</h4>
+<label>Search
+<input type="search" id="searchInput" placeholder="Search products">
+</label>
+<label>Category
+<select id="categoryFilter">
+<option value="all">All</option>
+<option value="helmets">Helmets</option>
+<option value="jackets">Jackets</option>
+<option value="accessories">Accessories</option>
+</select>
+</label>
+</aside>
+
+
+<section class="product-list" id="productList" aria-live="polite">
+<!-- JS will render product cards -->
+</section>
+</div>
+</main>
+
+
+<footer class="site-footer">
+<div class="container">&copy; <span id="year2">2025</span> totya</div>
+</footer>
+
+
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
