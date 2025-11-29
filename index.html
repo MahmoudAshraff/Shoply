@@ -1,0 +1,78 @@
+<!doctype html>
+<nav class="nav" aria-label="Main navigation">
+<ul class="nav__list">
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="header__actions">
+<button class="icon-btn" id="searchBtn" aria-label="Search">🔍</button>
+<a href="cart.html" class="cart-link" aria-label="Cart">Cart <span id="cartCount" class="cart-count">0</span></a>
+</div>
+</div>
+</header>
+
+
+<main>
+<section class="hero">
+<div class="container hero__inner">
+<div class="hero__content">
+<h1 class="hero__title">Discover premium gear — designed for riders</h1>
+<p class="hero__subtitle">Quality products, clean UI, fast checkout — built with HTML/CSS/JS only.</p>
+<a class="btn btn--primary" href="products.html">Shop Now</a>
+</div>
+<div class="hero__image">
+<img src="assets/images/hero.jpg" alt="Shoply hero">
+</div>
+</div>
+</section>
+
+
+<section class="features container">
+<div class="grid grid--3">
+<div class="card feature">
+<h3>Free shipping</h3>
+<p>Orders over $50.</p>
+</div>
+<div class="card feature">
+<h3>Secure payments</h3>
+<p>Trusted providers and encryption.</p>
+</div>
+<div class="card feature">
+<h3>Fast support</h3>
+<p>Email response within 24 hours.</p>
+</div>
+</div>
+</section>
+
+
+<section class="products container">
+<div class="section-header">
+<h2>Featured Products</h2>
+<a href="products.html" class="link--muted">View all</a>
+</div>
+<div id="featuredList" class="grid grid--3" aria-live="polite">
+<!-- JS will inject featured product cards here -->
+</div>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer__inner">
+<p>&copy; <span id="year">2025</span> totya — Shoply demo</p>
+<nav class="footer__nav">
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</div>
+</footer>
+
+
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
