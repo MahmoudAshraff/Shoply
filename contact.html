@@ -1,60 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact — Shoply</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Totya Shop</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="page page--contact">
+<body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header__inner">
-      <a href="index.html" class="brand">totya</a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="products.html">Products</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-      <a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-row">
+
+      <a href="index.html" class="brand">Totya<span class="dot">.</span></a>
+
+      <div class="controls">
+
+        <input type="search" id="searchInput" class="search" placeholder="Search products...">
+
+        <div class="selects">
+          <div class="select-wrap">
+            <select id="categoryFilter" class="custom-select">
+              <option value="all">All</option>
+              <option value="helmets">Helmets</option>
+              <option value="jackets">Jackets</option>
+              <option value="accessories">Accessories</option>
+            </select>
+            <span class="select-icon">▼</span>
+          </div>
+        </div>
+
+        <button class="cart-btn" id="openCart">Cart</button>
+      </div>
+
     </div>
   </header>
 
-  <!-- Main -->
-  <main class="container">
-    <h1>Contact Us</h1>
-    <p>Feel free to reach out. We usually reply within 24 hours.</p>
+  <!-- SIDEBAR CART -->
+  <aside class="sidebar" id="sidebarCart">
+    <div class="cart-items reveal" id="cartItems"></div>
 
-<form id="contactForm" class="contact-form fade-in reveal" novalidate>
+    <div class="cart-footer">
+      <p class="total">Total: <span id="cartTotal">$0</span></p>
+      <button class="btn primary" onclick="location.href='checkout.html'">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main container fade-in reveal">
+
+    <h1 style="margin-bottom:20px;font-size:28px;font-weight:700;">Contact Us</h1>
+
+    <form id="contactForm" class="fade-in reveal" novalidate style="max-width:480px;">
+
       <label>
-        Name
-        <input type="text" name="name" required placeholder="Your full name">
+        Full Name
+        <input type="text" required placeholder="Your Name">
       </label>
 
       <label>
-        Email
-        <input type="email" name="email" required placeholder="email@example.com">
+        Email Address
+        <input type="email" required placeholder="email@example.com">
       </label>
 
       <label>
-        Message
-        <textarea name="message" rows="6" required placeholder="Write your message here"></textarea>
+        Your Message
+        <textarea rows="6" required placeholder="Write your message here..."></textarea>
       </label>
 
-      <button class="btn btn--primary">Send Message</button>
+      <button class="btn primary" style="margin-top:12px;">Send Message</button>
+
     </form>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      &copy; <span id="yearContact">2025</span> totya — Shoply demo
-    </div>
+  <footer style="padding:40px 0;text-align:center;color:var(--muted)">
+    <p>&copy; 2025 Totya Shop. All rights reserved.</p>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+
 </body>
 </html>
