@@ -1,44 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Checkout — Shoply</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Totya Shop</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="page page--checkout">
-<header class="site-header">
-<div class="container header__inner">
-<a href="index.html" class="brand">totya</a>
-</div>
-</header>
 
+<body>
 
-<main class="container">
-<h1>Checkout</h1>
-<form id="checkoutForm" class="checkout-form fade-in reveal" novalidate>
-<div class="grid grid--2">
-<label>Full name<input type="text" name="name" required></label>
-<label>Email<input type="email" name="email" required></label>
-<label>Address<input type="text" name="address" required></label>
-<label>City<input type="text" name="city" required></label>
-</div>
-<div class="payment">
-<h3>Payment</h3>
-<label>Card number<input type="text" name="card" inputmode="numeric" required></label>
-<label>Expiry<input type="text" name="exp" placeholder="MM/YY" required></label>
-</div>
-<div class="actions">
-<button type="submit" class="btn btn--primary">Place Order</button>
-</div>
-</form>
-</main>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-row">
 
+      <a href="index.html" class="brand">Totya<span class="dot">.</span></a>
 
-<footer class="site-footer"><div class="container">&copy; <span id="year6">2025</span> totya</div></footer>
+      <div class="controls">
 
+        <input type="search" id="searchInput" class="search" placeholder="Search products...">
 
-<script src="assets/js/cart.js" defer></script>
-<script src="assets/js/main.js" defer></script>
+        <div class="selects">
+          <div class="select-wrap">
+            <select id="categoryFilter" class="custom-select">
+              <option value="all">All</option>
+              <option value="helmets">Helmets</option>
+              <option value="jackets">Jackets</option>
+              <option value="accessories">Accessories</option>
+            </select>
+            <span class="select-icon">▼</span>
+          </div>
+        </div>
+
+        <button class="cart-btn" id="openCart">Cart</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SIDEBAR CART -->
+  <aside class="sidebar" id="sidebarCart">
+    <div class="cart-items reveal" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <p class="total">Total: <span id="cartTotal">$0</span></p>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main container fade-in reveal">
+
+    <h1 style="margin-bottom:20px;font-size:28px;font-weight:700;">Checkout</h1>
+
+    <form id="checkoutForm" class="fade-in reveal" novalidate style="max-width:480px;">
+
+      <label>
+        Full Name
+        <input type="text" required placeholder="John Doe">
+      </label>
+
+      <label>
+        Email Address
+        <input type="email" required placeholder="email@example.com">
+      </label>
+
+      <label>
+        Shipping Address
+        <textarea required placeholder="Street / City / Country"></textarea>
+      </label>
+
+      <label>
+        Payment Method
+        <select required>
+          <option>Credit Card</option>
+          <option>PayPal</option>
+          <option>Cash on Delivery</option>
+        </select>
+      </label>
+
+      <button class="btn primary" style="margin-top:12px;">Place Order</button>
+
+    </form>
+
+  </main>
+
+  <footer style="padding:40px 0;text-align:center;color:var(--muted)">
+    <p>&copy; 2025 Totya Shop. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+
 </body>
 </html>
