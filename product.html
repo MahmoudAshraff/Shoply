@@ -1,53 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Product — Shoply</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — Totya Shop</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="page page--product">
-<header class="site-header">
-<div class="container header__inner">
-<a href="index.html" class="brand">totya</a>
-<nav class="nav">
-<ul class="nav__list">
-<li><a href="products.html">Products</a></li>
-</ul>
-</nav>
-<div class="header__actions">
-<a href="cart.html" class="cart-link">Cart <span id="cartCount3" class="cart-count">0</span></a>
-  <button id="themeToggle" class="icon-btn">🌓</button>
-</div>
-</div>
-</header>
+
+<body>
+
+  <!-- =============== HEADER =============== -->
+  <header class="header">
+    <div class="container header-row">
+
+      <!-- Logo -->
+      <a href="index.html" class="brand">Totya<span class="dot">.</span></a>
+
+      <!-- Controls -->
+      <div class="controls">
+
+        <!-- Search -->
+        <input type="search"
+               id="searchInput"
+               class="search"
+               placeholder="Search products...">
+
+        <!-- Category Filter -->
+        <div class="selects">
+          <div class="select-wrap">
+            <select id="categoryFilter" class="custom-select">
+              <option value="all">All</option>
+              <option value="helmets">Helmets</option>
+              <option value="jackets">Jackets</option>
+              <option value="accessories">Accessories</option>
+            </select>
+            <span class="select-icon">▼</span>
+          </div>
+        </div>
+
+        <!-- Cart Button -->
+        <button class="cart-btn" id="openCart">Cart</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =============== SIDEBAR CART =============== -->
+  <aside class="sidebar" id="sidebarCart">
+    <div class="cart-items reveal" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <p class="total">Total: <span id="cartTotal">$0</span></p>
+      <button class="btn primary" onclick="location.href='checkout.html'">Checkout</button>
+    </div>
+  </aside>
 
 
-<main class="container product-page">
-<div class="product-wrap fade-in reveal">
-<div class="gallery">
-<img id="productImage" src="assets/images/product-1.jpg" alt="Product image">
-</div>
-<div class="product-info">
-<h1 id="productTitle">Rider Helmet X</h1>
-<p class="price" id="productPrice">$129.00</p>
-<p id="productDesc">High-quality helmet with sleek design and ventilation.</p>
-<label>Quantity
-<input type="number" id="qty" value="1" min="1">
-</label>
-<div class="actions">
-<button id="addToCart" class="btn btn--primary">Add to cart</button>
-<a href="checkout.html" class="btn">Buy now</a>
-</div>
-</div>
-</div>
-</main>
+  <!-- =============== MAIN PRODUCT ================= -->
+  <main class="main container">
+
+    <section class="single-product-area fade-in reveal">
+
+      <div class="product-grid">
+
+        <!-- PRODUCT IMAGE -->
+        <div class="product-media">
+          <img id="productImage"
+               alt="Product image">
+        </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="product-info">
+
+          <h2 id="productTitle"></h2>
+
+          <div class="product-meta">
+            <span class="badge">Best Seller</span>
+            <span id="productPrice" class="price"></span>
+          </div>
+
+          <p id="productDesc" style="color:var(--muted);margin-bottom:20px;"></p>
+
+          <!-- Quantity / Add to Cart -->
+          <div style="display:flex;align-items:center;gap:12px;margin-top:12px;">
+
+            <select id="qty"
+                    class="custom-select"
+                    style="max-width:100px;">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+
+            <button id="addToCart"
+                    class="btn primary"
+                    style="padding:10px 18px;font-size:16px;">
+              Add to Cart
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
 
 
-<footer class="site-footer"><div class="container">&copy; <span id="year4">2025</span> totya</div></footer>
+  <!-- =============== FOOTER =============== -->
+  <footer class="footer" style="padding:40px 0;text-align:center;color:var(--muted)">
+    <p>&copy; 2025 Totya Shop. All rights reserved.</p>
+  </footer>
 
 
-<script src="assets/js/cart.js" defer></script>
-<script src="assets/js/main.js" defer></script>
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+
 </body>
 </html>
