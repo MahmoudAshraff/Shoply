@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout — Shoply</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page page--checkout">
+<header class="site-header">
+<div class="container header__inner">
+<a href="index.html" class="brand">totya</a>
+</div>
+</header>
+
+
+<main class="container">
+<h1>Checkout</h1>
+<form id="checkoutForm" class="checkout-form" novalidate>
+<div class="grid grid--2">
+<label>Full name<input type="text" name="name" required></label>
+<label>Email<input type="email" name="email" required></label>
+<label>Address<input type="text" name="address" required></label>
+<label>City<input type="text" name="city" required></label>
+</div>
+<div class="payment">
+<h3>Payment</h3>
+<label>Card number<input type="text" name="card" inputmode="numeric" required></label>
+<label>Expiry<input type="text" name="exp" placeholder="MM/YY" required></label>
+</div>
+<div class="actions">
+<button type="submit" class="btn btn--primary">Place Order</button>
+</div>
+</form>
+</main>
+
+
+<footer class="site-footer"><div class="container">&copy; <span id="year6">2025</span> totya</div></footer>
+
+
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
